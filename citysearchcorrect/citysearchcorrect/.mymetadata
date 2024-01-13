@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="citysearchcorrect"
+  id="myeclipse.1352289270006"
+  context-root="/project1"
+  j2ee-spec="5.0"
+  archive="citysearchcorrect.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

@@ -1,0 +1,36 @@
+
+Table
+Data
+Indexes
+Model
+Constraints
+Grants
+Statistics
+UI Defaults
+Triggers
+Dependencies
+SQL
+
+CREATE TABLE  "CITY1_USER" 
+   (	"ID" NUMBER, 
+	"NAME" VARCHAR2(4000), 
+	"PASSWORD" VARCHAR2(4000), 
+	"EMAIL" VARCHAR2(4000), 
+	"ADDRESS" VARCHAR2(4000), 
+	"COUNTRY" VARCHAR2(4000), 
+	"CONTACT" NUMBER, 
+	 CONSTRAINT "CITY1_USER_PK" PRIMARY KEY ("ID") ENABLE
+   )
+/
+
+CREATE OR REPLACE TRIGGER  "BI_CITY1_USER" 
+  before insert on "CITY1_USER"               
+  for each row  
+begin   
+    select "CITY1_USER_SEQ".nextval into :NEW.ID from dual; 
+end; 
+
+/
+ALTER TRIGGER  "BI_CITY1_USER" ENABLE
+/
+
